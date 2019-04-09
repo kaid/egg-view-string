@@ -2,14 +2,15 @@ const Renderer = require('./renderer');
 
 class StringView {
   constructor(ctx) {
-    const { config = {}, assets = {} } = ctx.app;
+    const { config } = ctx.app;
 
-    this.app = ctx.app;
-    this.config = config;
+    this.ctx = ctx;
+    this.config = config.stringView || { assets: {} };
   }
 
   get assets() {
-    return this.app.assets;
+    const { assets } = this.config;
+    return assets instanceof Function ? assets(this.ctx) : assets;
   }
 
   render(fullPath, locals = {}) {
