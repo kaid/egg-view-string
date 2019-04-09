@@ -1,0 +1,27 @@
+{
+  "name": "egg-view-string",
+  "version": "0.1.0",
+  "description": "简Eggjs 字符串view插件",
+  "main": "index.js",
+  "repository": "https://github.com/kaid/egg-view-string",
+  "author": "Kaid Wong <info@kaid.me>",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "eggPlugin": {
+    "name": "view-string"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "egg-view",
+    "string-view"
+  ],
+  "dependencies": {
+    "egg": "^2.3.0",
+    "lodash": "^4.17.11"
+  }
+}
